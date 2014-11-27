@@ -69,7 +69,7 @@
                     {% for post in posts %}
                         <div class="post">
                             <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
-                            <p class="muted">Posted on {{ post.created_at|format_date }}</p>
+                            <p class="muted">Posted by {{ post.author }} on {{ post.created_at|format_date }}</p>
 
                             <div class="post-content" data-type-cleanup="true">
                                 {{ post.content }}
