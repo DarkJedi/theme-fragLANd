@@ -41,7 +41,7 @@
                 {% if not is_login %}
                 <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
+                        <li class="{{ set_active(site.base_url) }}"><a href="/">Home</a></li>
                         {% if pages %}
                           {% for page in pages %}
                             <li class="{{ set_active(page.permalink) }}"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
