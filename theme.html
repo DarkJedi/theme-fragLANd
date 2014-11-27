@@ -26,32 +26,29 @@
   {% else %}
     <div>
 
-        <nav class="navbar" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">fragLANd</a>
-                </div>
-
-                {% if not is_login %}
-                <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="{{ set_active(site.base_url) }}"><a href="/">Home</a></li>
-                        {% if pages %}
-                          {% for page in pages %}
-                            <li class="{{ set_active(page.permalink) }}"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
-                          {% endfor %}
-                        {% endif %}
-                    </ul>
-                </div>
-                {% endif %}
-
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">fragLANd</a>
             </div>
+
+            {% if not is_login %}
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="{{ set_active(site.base_url) }}"><a href="/">Home</a></li>
+                    {% if pages %}
+                      {% for page in pages %}
+                        <li class="{{ set_active(page.permalink) }}"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                      {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+            {% endif %}
         </nav>
 
         <div class="container-fluid">
