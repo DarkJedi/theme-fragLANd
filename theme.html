@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">fragLANd</a>
+                <a class="navbar-brand" href="/"><i>fragLANd</i></a>
             </div>
 
             {% if not is_login %}
@@ -68,7 +68,7 @@
                         <div class="panel panel-default post">
                             <div class="panel-heading">
                                 <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
-                                <p class="muted">Posted by {{ post.author.name }} on {{ post.created_at|format_date }}</p>
+                                <div class="muted"><small><i>Posted by {{ post.author.name }} on {{ post.created_at|format_date }}</i></small></div>
                             </div>
                             <div class="panel-body">
                                 <div class="post-content" data-type-cleanup="true">
